@@ -1,0 +1,9 @@
+export { default as Header } from "./Header";
+export { default as Banner } from "./Banner";
+export { default as Animation } from "./Animation";
+export { default as Partner } from "./Partner";
+export { default as OurWork } from "./OurWork";
+export { default as WhatWeDo } from "./WhatWeDo";
+export { default as OurProduct } from "./OurProduct";
+export { default as ReachUs } from "./ReachUs";
+export { default as Footer } from "./Footer";

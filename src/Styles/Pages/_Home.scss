@@ -1,0 +1,715 @@
+#root {
+    background-color: $blue-color-07;
+}
+
+.Home {
+    max-width: 1440px;
+    background-color: $white-color-00;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+
+    @include responsiveTo(tablet) {
+        width: 100vw;
+    }
+
+    /* 
+    COMPONENT HEADER
+    */
+    &__Header {
+        background-color: $white-color-01;
+        padding: 62px 58px 31px 0;
+        @include flexEnd;
+
+        @include responsiveTo(tablet) {
+            display: none;
+        }
+
+        &__Wrapper {
+            @include flexCenterVert;
+
+            &--text {
+                font-weight: 500;
+                color: $blue-color-03;
+                margin: 0 29px 0 17px;
+                @include fontSize(14, normal, normal)
+            }
+        }
+
+        &__Button {
+            background-color: $pink-color-01;
+            border-radius: 46px;
+
+            button {
+                font-weight: 600;
+                padding: 15px 25px;
+                color: $white-color-00;
+                @include fontSize(18, normal, normal);
+            }
+        }
+    }
+
+    /* 
+    COMPONENT BANNER
+    */
+    &__Banner {
+        z-index: 5;
+        @include flexCenterColumn;
+
+        @include responsiveTo(tablet) {
+            padding: 22px 20px;
+        }
+
+        &--title {
+            color: $dark-color-01;
+            font-weight: bold;
+            text-align: center;
+            margin: 67px 0 12px;
+            @include fontSize(48, normal, normal);
+
+            @include responsiveTo(tablet) {
+                @include fontSize(30, normal, normal);
+            }
+        }
+
+        &--subtitle {
+            margin: 38px 0;
+            padding: 0 267px;
+            text-align: center;
+            color: $blue-color-04;
+            @include fontSize(30, normal, normal);
+
+            @include responsiveTo(tablet) {
+                margin: 21px 0;
+                padding: 0 27px;
+                @include fontSize(18, normal, normal);
+            }
+
+            .--bold {
+                font-weight: bold;
+                color: $blue-color-02;
+            }
+
+            .--navy {
+                color: $blue-color-02;
+            }
+        }
+
+        &--desc {
+            padding: 0 390px;
+            text-align: center;
+            color: $blue-color-01;
+            @include fontSize(16, 24, normal);
+
+            @include responsiveTo(tablet) {
+                padding: 0 18px;
+                @include fontSize(13, 24, normal);
+            }
+
+        }
+
+        &__Logo {
+            @include responsiveTo(tablet) {
+                width: 42px;
+                height: 46px;
+            }
+        }
+
+        &__Background {
+            z-index: -1;
+            @include absolute(0, 0, 0, 0);
+
+            @include responsiveTo(tablet) {
+                height: 14.5%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            &__Detail {
+                &--left {
+                    z-index: -1;
+                    position: absolute;
+                    top: 4%;
+                    left: 0;
+
+                    @include responsiveTo(tablet) {
+                        display: none;
+                    }
+                }
+
+                &--right {
+                    z-index: -1;
+                    position: absolute;
+                    top: 12%;
+                    right: 0;
+
+                    @include responsiveTo(tablet) {
+                        display: none;
+                    }
+                }
+
+            }
+        }
+    }
+
+    /* 
+    COMPONENT PARTNER
+    */
+    &__Partner {
+        padding: 5rem 81px 10rem;
+        width: 100%;
+        @include flexEven;
+
+        @include responsiveTo(tablet) {
+            padding: 5rem 10px;
+            flex-wrap: wrap;
+
+            >img {
+                width: 33%;
+            }
+        }
+    }
+
+    /* 
+    COMPONENT OUR WORK
+    */
+    &__Work {
+        position: relative;
+        z-index: 5;
+        @include flexCenterColumn;
+
+        &--title {
+            color: $white-color-00;
+            font-weight: bold;
+            text-align: center;
+            margin: 22px 0 42px;
+            @include fontSize(36, normal, normal);
+
+            @include responsiveTo(tablet) {
+                @include fontSize(24, 27, normal);
+            }
+        }
+
+        &__Wrapper {
+            @include flexCenterHoriz;
+
+            @include responsiveTo(tablet) {
+                @include flexCenterColumn;
+            }
+
+            >div {
+                &:last-child {
+                    margin-left: 24px;
+
+                    @include responsiveTo(tablet) {
+                        margin-left: 0;
+                        margin-top: 19px;
+                    }
+
+                    .Home__Work__Wrapper__Cards--title {
+                        color: $blue-color-05;
+                        font-weight: bold;
+                        text-align: center;
+                        margin-bottom: 23px;
+                        @include fontSize(24, 27, normal);
+
+                        @include responsiveTo(tablet) {
+                            @include fontSize(18, 20, normal);
+                        }
+                    }
+                }
+            }
+
+            &__Cards {
+                background-color: $white-color-00;
+                border-radius: 37px;
+                width: 479px;
+                height: 170px;
+                padding: 39px 50px 29px;
+
+                @include responsiveTo(tablet) {
+                    width: 290px;
+                    height: 153px;
+                    padding: 30px 25px;
+                }
+
+                &--title {
+                    color: $blue-color-06;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-bottom: 23px;
+                    @include fontSize(24, 27, normal);
+
+                    @include responsiveTo(tablet) {
+                        @include fontSize(18, 20, normal);
+                    }
+                }
+
+                &--desc {
+                    color: $blue-color-01;
+                    font-weight: 500;
+                    text-align: center;
+                    @include fontSize(16, 21, normal);
+
+                    @include responsiveTo(tablet) {
+                        @include fontSize(13, 16, normal);
+                    }
+                }
+
+                &:last-child {
+                    margin-left: 24px;
+                }
+            }
+        }
+
+        &__Footer {
+            margin-top: 47px;
+            background-color: $blue-color-06;
+            border-radius: 46px;
+            @include flexCenter;
+
+            button {
+                padding: 14px 52px;
+                font-weight: 600;
+                color: $white-color-00;
+                @include fontSize(18, normal, normal);
+            }
+        }
+
+        &__Background {
+            z-index: -1;
+            @include absolute(auto, auto, auto, auto);
+
+            @include responsiveTo(tablet) {
+                width: 100%;
+                height: 175%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    /* 
+    COMPONENT WHAT WE DO
+    */
+    &__Info {
+        padding-top: 15rem;
+        @include flexCenterColumn;
+
+        @include responsiveTo(tablet) {
+            padding-top: 12rem;
+        }
+
+        &--title {
+            color: $blue-color-01;
+            font-weight: bold;
+            text-align: center;
+            margin: 9px 0 119px;
+            @include fontSize(36, normal, normal);
+
+            @include responsiveTo(tablet) {
+                margin-bottom: 55px;
+                @include fontSize(24, normal, normal);
+            }
+        }
+
+        &__Content {
+            &__Map {
+                padding: 0 186px;
+                margin-bottom: 120px;
+                @include flexBetween;
+
+                @include responsiveTo(tablet) {
+                    padding: 0 15px;
+                    margin-bottom: 52px;
+                    @include flexCenterColumn;
+                    flex-direction: column-reverse;
+
+                    >img {
+                        width: 100%;
+                        margin-bottom: 16px;
+                    }
+                }
+
+                &__Wrapper {
+                    @include responsiveTo(tablet) {
+                        @include flexCenterColumn;
+                    }
+
+                    &--title {
+                        color: $dark-color-00;
+                        font-weight: bold;
+                        margin-left: 13px;
+                        @include fontSize(24, normal, normal);
+
+                        @include responsiveTo(tablet) {
+                            width: 100%;
+                        }
+                    }
+
+                    &--desc {
+                        color: $dark-color-00;
+                        margin-top: 9px;
+                        padding-right: 68px;
+                        @include fontSize(16, 21, normal);
+
+                        @include responsiveTo(tablet) {
+                            padding-right: 0;
+                            text-align: center;
+                            width: 100%;
+                        }
+                    }
+
+                    &__Container {
+                        @include flexCenterVert;
+
+                        @include responsiveTo(tablet) {
+                            @include flexCenter;
+                        }
+                    }
+                }
+
+            }
+
+            >div:nth-child(2) {
+                flex-direction: row-reverse;
+
+                @include responsiveTo(tablet) {
+                    flex-direction: column-reverse;
+                }
+
+                .Home__Info__Content__Map__Wrapper__Container {
+                    justify-content: flex-end;
+
+                    @include responsiveTo(tablet) {
+                        justify-content: center;
+                    }
+                }
+
+                .Home__Info__Content__Map__Wrapper--desc {
+                    text-align: end;
+                    padding-left: 146px;
+                    padding-right: 0;
+
+                    @include responsiveTo(tablet) {
+                        padding-left: 0;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        &__Footer {
+            background-color: $pink-color-01;
+            border-radius: 46px;
+            margin: 123px 0 110px;
+            @include flexCenter;
+
+            @include responsiveTo(tablet) {
+                margin: 73px 0 64px;
+            }
+
+            button {
+                color: $white-color-00;
+                padding: 14px 40px;
+                font-weight: 600;
+                @include fontSize(18, normal, normal);
+            }
+        }
+    }
+
+    /* 
+    COMPONENT OUR PRODUCT
+    */
+    &__Product {
+        background: linear-gradient(180deg, $gradient-01 0%, $gradient-02 77.72%, $gradient-03 100%);
+        padding: 68px 0;
+        @include flexCenterColumn;
+
+        @include responsiveTo(tablet) {
+            padding: 65px 32px 100px;
+        }
+
+        &--title {
+            color: $white-color-00;
+            margin: 21px 0 48px;
+            font-weight: bold;
+            @include fontSize(36, normal, normal);
+
+            @include responsiveTo(tablet) {
+                margin-bottom: 83px;
+                @include fontSize(24, normal, normal);
+            }
+        }
+
+        &__Content {
+            @include flexAround;
+
+            @include responsiveTo(tablet) {
+                >img {
+                    display: none;
+                }
+            }
+
+            &__Wrapper {
+                width: 30%;
+                @include flexCenterColumn;
+
+                @include responsiveTo(tablet) {
+                    width: 100%;
+                }
+
+                >img {
+                    width: 153px;
+                    height: 101px;
+                }
+
+                &--title {
+                    color: $white-color-00;
+                    font-weight: bold;
+                    margin: 30px 0;
+                    @include fontSize(24, normal, normal);
+
+                    @include responsiveTo(tablet) {
+                        margin: 50px 0;
+                    }
+                }
+
+                &--text {
+                    color: $white-color-00;
+                    margin-bottom: 20px;
+                    text-align: center;
+                    @include fontSize(16, 23, normal);
+                }
+
+                &--info {
+                    color: $white-color-00;
+                    margin-bottom: 20px;
+                    text-align: center;
+                    @include fontSize(16, 23, normal);
+
+                    span {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    /* 
+    COMPONENT REACH US
+    */
+    &__Contact {
+        background-color: $white-color-01;
+        padding: 85px 0 116px;
+        align-items: center;
+        @include flexColumn;
+
+        @include responsiveTo(tablet) {
+            padding: 46px 40px;
+        }
+
+        form {
+            width: 100%;
+            padding: 0 150px;
+
+            @include responsiveTo(tablet) {
+                padding: 0;
+            }
+        }
+
+        &--title {
+            color: $blue-color-01;
+            margin: 18px 0 44px;
+            text-align: center;
+            font-weight: bold;
+            @include fontSize(36, normal, normal);
+
+            @include responsiveTo(tablet) {
+                @include fontSize(24, normal, normal);
+            }
+        }
+
+        &--desc {
+            color: $blue-color-01;
+            font-weight: 500;
+            padding: 0 382px;
+            margin-bottom: 44px;
+            text-align: center;
+            @include fontSize(18, 24, normal);
+
+            @include responsiveTo(tablet) {
+                padding: 0;
+                @include fontSize(13, 23, normal);
+            }
+        }
+
+        &__Form {
+            border-radius: 15px;
+            background-color: $white-color-00;
+            padding: 54px 47px 59px;
+            @include flexCenterHoriz;
+
+            @include responsiveTo(tablet) {
+                padding: 0 12px;
+                @include flexCenterColumn;
+            }
+
+            label {
+                font-weight: bold;
+                color: $dark-color-02;
+                text-transform: uppercase;
+                margin-bottom: 9px;
+                @include fontSize(12, normal, normal);
+
+            }
+
+            &__Input {
+                min-width: 300px;
+                @include flexColumn;
+
+                @include responsiveTo(tablet) {
+                    min-width: 100%;
+                    width: 100%24px;
+                    padding: 29px 12px;
+                }
+
+                input {
+                    border-radius: 45px;
+                    background-color: #D6F2FC;
+                    padding: 17px 29px;
+                    margin-bottom: 24px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &__TextArea {
+                margin-left: 80px;
+                position: relative;
+                width: 100%;
+                @include flexColumn;
+
+                @include responsiveTo(tablet) {
+                    margin-left: 0;
+                    padding: 0 4px 36px;
+                }
+
+                textarea {
+                    background-color: #D6F2FC;
+                    padding: 17px 29px;
+                    border-radius: 19px;
+                    height: 100%;
+                    resize: none;
+                }
+
+                >div {
+                    @include absolute(auto, 14px, 18px, auto);
+
+                    @include responsiveTo(tablet) {
+                        @include absolute(auto, 25px, 50px, auto);
+                    }
+
+                    button {
+                        padding: 14px 37px;
+                        background-color: #00ABEC;
+                        border-radius: 68px;
+                        font-weight: 600;
+                        color: $white-color-00;
+                        @include fontSize(18, normal, normal);
+                    }
+                }
+            }
+        }
+    }
+
+    /* 
+    COMPONENT FOOTER
+    */
+    &__Footer {
+        background-color: $blue-color-01;
+        display: flex;
+        padding: 97px 64px 145px;
+
+        @include responsiveTo(tablet) {
+            padding: 60px 35px;
+            @include flexCenterColumn;
+        }
+
+        >img {
+            width: 356px;
+            height: 83px;
+            object-fit: cover;
+
+            @include responsiveTo(tablet) {
+                width: 100%;
+                height: 100%;
+                margin-bottom: 42px;
+            }
+        }
+
+        &__Link {
+            margin: 0 258px 0 276px;
+
+            @include responsiveTo(tablet) {
+                margin: 0;
+                @include flexCenterColumn;
+            }
+
+            &--title {
+                font-weight: 600;
+                color: $white-color-00;
+                margin-bottom: 25px;
+                @include fontSize(18, normal, normal);
+            }
+
+            >a {
+                display: block;
+                color: $white-color-00;
+                margin-bottom: 25px;
+                @include fontSize(14, normal, normal);
+
+            }
+        }
+
+        &__Social {
+            @include responsiveTo(tablet) {
+                margin-top: 43px;
+                @include flexCenterColumn;
+            }
+
+            &--title {
+                font-weight: 600;
+                color: $white-color-00;
+                margin-bottom: 25px;
+                @include fontSize(18, normal, normal);
+            }
+
+            &__Media {
+                margin-bottom: 30px;
+                @include flexCenterVert;
+
+                >img {
+                    margin-right: 18px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            &__Contact {
+                @include flexCenterVert;
+
+                &--title {
+                    font-weight: 500;
+                    color: $white-color-00;
+                    margin-left: 18px;
+                    @include fontSize(14, normal, normal);
+                }
+            }
+        }
+    }
+}

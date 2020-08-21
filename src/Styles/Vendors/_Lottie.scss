@@ -1,0 +1,11 @@
+   /* 
+    COMPONENT ANIMATION
+    */
+   .lottieAnimation {
+      >div {
+         @include responsiveTo(tablet) {
+            width: 345px !important;
+            height: 244px !important;
+         }
+      }
+   }
