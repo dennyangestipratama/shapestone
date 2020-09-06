@@ -41,9 +41,13 @@
             background-color: $pink-color-01;
             border-radius: 46px;
 
+            @include onHover {
+                background-color: $pink-color-hover-01;
+            }
+
             button {
                 font-weight: 600;
-                padding: 15px 25px;
+                padding: 15px 25px 9px;
                 color: $white-color-00;
                 @include fontSize(18, normal, normal);
             }
@@ -88,10 +92,6 @@
 
             .--bold {
                 font-weight: bold;
-                color: $blue-color-02;
-            }
-
-            .--navy {
                 color: $blue-color-02;
             }
         }
@@ -269,8 +269,12 @@
             border-radius: 46px;
             @include flexCenter;
 
+            @include onHover {
+                background-color: $blue-color-hover-02;
+            }
+
             button {
-                padding: 14px 52px;
+                padding: 14px 52px 12px;
                 font-weight: 600;
                 color: $white-color-00;
                 @include fontSize(18, normal, normal);
@@ -405,13 +409,17 @@
             margin: 123px 0 110px;
             @include flexCenter;
 
+            @include onHover {
+                background-color: $pink-color-hover-02;
+            }
+
             @include responsiveTo(tablet) {
                 margin: 73px 0 64px;
             }
 
             button {
                 color: $white-color-00;
-                padding: 14px 40px;
+                padding: 14px 40px 12px;
                 font-weight: 600;
                 @include fontSize(18, normal, normal);
             }
@@ -545,7 +553,7 @@
         }
 
         &__Form {
-            border-radius: 15px;
+            border-radius: 15px 15px 0 0;
             background-color: $white-color-00;
             padding: 54px 47px 59px;
             @include flexCenterHoriz;
@@ -613,13 +621,57 @@
                     }
 
                     button {
-                        padding: 14px 37px;
-                        background-color: #00ABEC;
+                        padding: 15px 37px 11px;
+                        background-color: $blue-color-08;
                         border-radius: 68px;
                         font-weight: 600;
                         color: $white-color-00;
                         @include fontSize(18, normal, normal);
+
+                        @include onHover {
+                            background-color: $blue-color-hover-01;
+                        }
                     }
+                }
+            }
+        }
+
+        &__Phone {
+            border-radius: 0 0 15px 15px;
+            background-color: $white-color-00;
+            padding: 0 47px 35px;
+            @include flexCenterColumn;
+
+            &--title {
+                font-weight: 500;
+                text-align: center;
+                color: $dark-color-02;
+                margin-bottom: 10px;
+                @include fontSize(14, 20, normal)
+            }
+
+            &--border {
+                background-color: rgba($color: #000000, $alpha: 0.1);
+                height: 1px;
+                width: 100%;
+                margin-bottom: 29px;
+            }
+
+            &__Wrapper {
+                @include flexCenterVert;
+
+                &--title {
+                    font-weight: 500;
+                    text-align: center;
+                    color: $dark-color-02;
+                    margin-left: 17px;
+                    @include fontSize(14, 20, normal)
+                }
+
+                svg {
+                    width: 17px;
+                    height: 27px;
+                    @include svgColor($dark-color-02);
                 }
             }
         }

@@ -4,7 +4,7 @@ import {
    Banner,
    Footer,
    Header,
-   OurProduct,
+   // OurProduct,
    OurWork,
    Partner,
    ReachUs,
@@ -20,7 +20,7 @@ export default class index extends Component {
             <Partner />
             <OurWork />
             <WhatWeDo />
-            <OurProduct />
+            {/* <OurProduct /> */}
             <ReachUs />
             <Footer />
          </div>

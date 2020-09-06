@@ -14,7 +14,7 @@ export default class Banner extends Component {
             <div className="Home__Banner--title">Shape Your Vision With Us</div>
             <Animation />
             <div className="Home__Banner--subtitle">
-               <span className='--bold'>Shapestone</span> is a <span className='--navy'>technology consultant</span> and <span className='--navy'>software product company</span> based in Los Angeles
+               <span className='--bold'>Shapestone</span> is a technology consultant and software product company based in Los Angeles
             </div>
             <div className="Home__Banner--desc">
                Talent and technology are the main difference between success and failure.

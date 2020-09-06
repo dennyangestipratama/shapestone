@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import { ReactComponent as Plane } from '../../../Assets/Icons/plane.svg'
+import { ReactComponent as Phone } from '../../../Assets/Icons/phone.svg'
 
 export default class ReachUs extends Component {
    render() {
@@ -29,6 +30,14 @@ export default class ReachUs extends Component {
                      <div>
                         <button>Send</button>
                      </div>
+                  </div>
+               </div>
+               <div className="Home__Contact__Phone">
+                  <div className="Home__Contact__Phone--border"></div>
+                  <div className="Home__Contact__Phone--title">or you can call us directly at :</div>
+                  <div className="Home__Contact__Phone__Wrapper">
+                     <Phone />
+                     <div className="Home__Contact__Phone__Wrapper--title">(424) 442-9535</div>
                   </div>
                </div>
             </form>

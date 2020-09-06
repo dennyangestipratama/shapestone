@@ -243,8 +243,24 @@
     white-space: nowrap;
 }
 
+/*  Mixin for Change SVG Colors
+    How to use: 
+    @include svgColor(#00000)
+*/
 @mixin svgColor($svg-color) {
     path {
         fill: $svg-color;
+    }
+}
+
+/*  Mixin for Hover State
+    How to use: 
+    @include onHover{
+        color: #00000
+    }
+*/
+@mixin onHover {
+    &:hover {
+        @content;
     }
 }
