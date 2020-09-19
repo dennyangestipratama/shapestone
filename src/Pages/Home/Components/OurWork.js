@@ -1,46 +1,31 @@
 import React, { Component } from 'react'
 import Slide from 'react-reveal/Slide';
 import Jump from 'react-reveal/Jump';
+import Fade from 'react-reveal/Fade';
 
 import { ReactComponent as MobileBrowser } from '../../../Assets/Icons/mobile-browser.svg'
 import Background from '../../../Assets/Backgrounds/work-background.png'
 
 export default class OurWork extends Component {
-   constructor(props) {
-      super(props)
-
-      this.state = {
-         works: [
-            {
-               id: 1,
-               title: 'Nearshore Engineering',
-               desc: 'Java, Front-end and QA engineering services to client in Los the Angeles Metropolitan Area.'
-            },
-            {
-               id: 2,
-               title: 'Onsite Engineering',
-               desc: 'Data Engineering services to client, in Burbank, California.'
-            },
-         ]
-      }
-   }
-
    render() {
-      const { works } = this.state
       return (
          <Slide bottom>
             <div id='OurWork' className='Home__Work'>
                <MobileBrowser />
                <div className="Home__Work--title">Some of our work</div>
                <div className="Home__Work__Wrapper">
-                  {works.map(work => {
-                     return (
-                        <div className="Home__Work__Wrapper__Cards" key={work.id}>
-                           <div className="Home__Work__Wrapper__Cards--title">{work.title}</div>
-                           <div className="Home__Work__Wrapper__Cards--desc">{work.desc}</div>
-                        </div>
-                     )
-                  })}
+                  <Fade right>
+                     <div className="Home__Work__Wrapper__Cards">
+                        <div className="Home__Work__Wrapper__Cards--title">Nearshore Engineering</div>
+                        <div className="Home__Work__Wrapper__Cards--desc">Java, Front-end and QA engineering services to client in Los the Angeles Metropolitan Area.</div>
+                     </div>
+                  </Fade>
+                  <Fade left>
+                     <div className="Home__Work__Wrapper__Cards">
+                        <div className="Home__Work__Wrapper__Cards--title">Onsite Engineering</div>
+                        <div className="Home__Work__Wrapper__Cards--desc">Data Engineering services to client, in Burbank, California.</div>
+                     </div>
+                  </Fade>
                </div>
                <Jump>
                   <a href="#ReachUs">
