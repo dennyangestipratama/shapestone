@@ -41,7 +41,7 @@ export default class WhatWeDo extends Component {
                      <img src={Consulting} alt='Consulting.' />
                   </div>
                </Slide>
-               <Slide top>
+               <Slide top cascade>
                   <div className="Home__Info__Content__Map">
                      <div className="Home__Info__Content__Map__Wrapper">
                         <div className='Home__Info__Content__Map__Wrapper__Container'>

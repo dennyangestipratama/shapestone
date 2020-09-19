@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import HeadShake from 'react-reveal/HeadShake';
+import Jello from 'react-reveal/Jello';
 
 import { ReactComponent as Plane } from '../../../Assets/Icons/plane.svg'
 import { ReactComponent as Phone } from '../../../Assets/Icons/phone.svg'
@@ -18,18 +20,28 @@ export default class ReachUs extends Component {
                <div className="Home__Contact__Form">
                   <div className="Home__Contact__Form__Input">
                      <label htmlFor="name">Name*</label>
-                     <input type="text" id="name" />
+                     <HeadShake>
+                        <input type="text" id="name" />
+                     </HeadShake>
                      <label htmlFor="email">Email*</label>
-                     <input type="email" id="email" />
+                     <HeadShake>
+                        <input type="email" id="email" />
+                     </HeadShake>
                      <label htmlFor="phone">Phone*</label>
-                     <input type="number" id="phone" />
+                     <HeadShake>
+                        <input type="number" id="phone" />
+                     </HeadShake>
                   </div>
                   <div className="Home__Contact__Form__TextArea">
                      <label htmlFor="messages">Messages</label>
-                     <textarea cols="30" rows="14" name="messages" id="messages" />
-                     <div>
-                        <button>Send</button>
-                     </div>
+                     <HeadShake>
+                        <textarea cols="30" rows="14" name="messages" id="messages" />
+                     </HeadShake>
+                     <Jello >
+                        <div>
+                           <button>Send</button>
+                        </div>
+                     </Jello >
                   </div>
                </div>
                <div className="Home__Contact__Phone">
