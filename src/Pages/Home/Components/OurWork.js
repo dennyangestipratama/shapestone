@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Slide from 'react-reveal/Slide';
+import Jump from 'react-reveal/Jump';
 
 import { ReactComponent as MobileBrowser } from '../../../Assets/Icons/mobile-browser.svg'
 import Background from '../../../Assets/Backgrounds/work-background.png'
@@ -26,26 +28,30 @@ export default class OurWork extends Component {
    render() {
       const { works } = this.state
       return (
-         <div id='OurWork' className='Home__Work'>
-            <MobileBrowser />
-            <div className="Home__Work--title">Some of our work</div>
-            <div className="Home__Work__Wrapper">
-               {works.map(work => {
-                  return (
-                     <div className="Home__Work__Wrapper__Cards" key={work.id}>
-                        <div className="Home__Work__Wrapper__Cards--title">{work.title}</div>
-                        <div className="Home__Work__Wrapper__Cards--desc">{work.desc}</div>
-                     </div>
-                  )
-               })}
-            </div>
-            <a href="#ReachUs">
-               <div className="Home__Work__Footer">
-                  <button>Get in Touch</button>
+         <Slide bottom>
+            <div id='OurWork' className='Home__Work'>
+               <MobileBrowser />
+               <div className="Home__Work--title">Some of our work</div>
+               <div className="Home__Work__Wrapper">
+                  {works.map(work => {
+                     return (
+                        <div className="Home__Work__Wrapper__Cards" key={work.id}>
+                           <div className="Home__Work__Wrapper__Cards--title">{work.title}</div>
+                           <div className="Home__Work__Wrapper__Cards--desc">{work.desc}</div>
+                        </div>
+                     )
+                  })}
                </div>
-            </a>
-            <img src={Background} alt="background" className='Home__Work__Background' />
-         </div>
+               <Jump>
+                  <a href="#ReachUs">
+                     <div className="Home__Work__Footer">
+                        <button>Get in Touch</button>
+                     </div>
+                  </a>
+               </Jump>
+               <img src={Background} alt="background" className='Home__Work__Background' />
+            </div>
+         </Slide>
       )
    }
 }

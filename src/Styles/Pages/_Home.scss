@@ -110,6 +110,25 @@
         }
 
         &__Logo {
+            animation: slideTop 1s ease-in-out;
+
+            @include keyframes(slideTop) {
+                0% {
+                    transform: translateY(-500px);
+                    opacity: 0;
+                }
+
+                50% {
+                    transform: translateY(50px);
+                    opacity: 0.5;
+                }
+
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
             @include responsiveTo(tablet) {
                 width: 42px;
                 height: 46px;
@@ -159,6 +178,7 @@
     &__Partner {
         padding: 5rem 81px 10rem;
         width: 100%;
+        animation: fadeIn 0.8s linear;
         @include flexEven;
 
         @include responsiveTo(tablet) {
@@ -167,6 +187,18 @@
 
             >img {
                 width: 33%;
+            }
+        }
+
+        @include keyframes(fadeIn) {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
             }
         }
     }

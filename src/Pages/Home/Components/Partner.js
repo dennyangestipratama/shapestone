@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Swing from 'react-reveal/Swing';
+import Fade from 'react-reveal/Fade';
 
 import Hulu from '../../../Assets/Logos/hulu.png'
 import Vroozi from '../../../Assets/Logos/vroozi.png'
@@ -41,16 +43,24 @@ export default class Partner extends Component {
       }
    }
 
+   componentDidMount() {
+   }
+
+
    render() {
       const { partners } = this.state
       return (
-         <div id="Partner" className='Home__Partner'>
-            {partners.map(partner => {
-               return (
-                  <img src={partner.image} alt={partner.name} key={partner.id} />
-               )
-            })}
-         </div>
+         <Fade>
+            <div id="Partner" className='Home__Partner'>
+               {partners.map(partner => {
+                  return (
+                     <Swing>
+                        <img src={partner.image} alt={partner.name} key={partner.id} />
+                     </Swing>
+                  )
+               })}
+            </div>
+         </Fade>
       )
    }
 }
