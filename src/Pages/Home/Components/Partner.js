@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Swing from 'react-reveal/Swing';
 import Fade from 'react-reveal/Fade';
 
 import Hulu from '../../../Assets/Logos/hulu.png'
@@ -50,13 +49,11 @@ export default class Partner extends Component {
    render() {
       const { partners } = this.state
       return (
-         <Fade>
+         <Fade bottom distance={'30px'} duration={1500}>
             <div id="Partner" className='Home__Partner'>
                {partners.map(partner => {
                   return (
-                     <Swing>
-                        <img src={partner.image} alt={partner.name} key={partner.id} />
-                     </Swing>
+                     <img src={partner.image} alt={partner.name} key={partner.id} />
                   )
                })}
             </div>

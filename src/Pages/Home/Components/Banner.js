@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Fade from 'react-reveal/Fade';
 
 import { Animation } from './index'
 import Shapestone from '../../../Assets/Logos/shapestone-logo-01.png'
@@ -10,7 +11,9 @@ export default class Banner extends Component {
    render() {
       return (
          <div id='Banner' className='Home__Banner'>
-            <img src={Shapestone} alt="shapestone" className='Home__Banner__Logo' />
+            <Fade top distance={'30px'} duration={1800}>
+               <img src={Shapestone} alt="shapestone" className='Home__Banner__Logo' />
+            </Fade>
             <div className="Home__Banner--title">Shape Your Vision With Us</div>
             <Animation />
             <div className="Home__Banner--subtitle">
@@ -23,7 +26,7 @@ export default class Banner extends Component {
             <img src={Background} alt="background" className='Home__Banner__Background' />
             <img src={Detail_1} alt="background" className='Home__Banner__Background__Detail--left' />
             <img src={Detail_2} alt="background" className='Home__Banner__Background__Detail--right' />
-         </div>
+         </div >
       )
    }
 }

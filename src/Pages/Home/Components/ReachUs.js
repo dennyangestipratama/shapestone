@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import HeadShake from 'react-reveal/HeadShake';
-import Jello from 'react-reveal/Jello';
+import Swing from 'react-reveal/Swing';
+import Fade from 'react-reveal/Fade';
 
 import { ReactComponent as Plane } from '../../../Assets/Icons/plane.svg'
 import { ReactComponent as Phone } from '../../../Assets/Icons/phone.svg'
@@ -18,31 +18,25 @@ export default class ReachUs extends Component {
             </div>
             <form action="">
                <div className="Home__Contact__Form">
-                  <div className="Home__Contact__Form__Input">
-                     <label htmlFor="name">Name*</label>
-                     <HeadShake>
+                  <Fade duration={1200}>
+                     <div className="Home__Contact__Form__Input">
+                        <label htmlFor="name">Name*</label>
                         <input type="text" id="name" />
-                     </HeadShake>
-                     <label htmlFor="email">Email*</label>
-                     <HeadShake>
+                        <label htmlFor="email">Email*</label>
                         <input type="email" id="email" />
-                     </HeadShake>
-                     <label htmlFor="phone">Phone*</label>
-                     <HeadShake>
+                        <label htmlFor="phone">Phone*</label>
                         <input type="number" id="phone" />
-                     </HeadShake>
-                  </div>
-                  <div className="Home__Contact__Form__TextArea">
-                     <label htmlFor="messages">Messages</label>
-                     <HeadShake>
+                     </div>
+                     <div className="Home__Contact__Form__TextArea">
+                        <label htmlFor="messages">Messages</label>
                         <textarea cols="30" rows="14" name="messages" id="messages" />
-                     </HeadShake>
-                     <Jello >
-                        <div>
-                           <button>Send</button>
-                        </div>
-                     </Jello >
-                  </div>
+                        <Swing >
+                           <div>
+                              <button>Send</button>
+                           </div>
+                        </Swing >
+                     </div>
+                  </Fade>
                </div>
                <div className="Home__Contact__Phone">
                   <div className="Home__Contact__Phone--border"></div>
@@ -53,7 +47,7 @@ export default class ReachUs extends Component {
                   </div>
                </div>
             </form>
-         </div>
+         </div >
       )
    }
 }
