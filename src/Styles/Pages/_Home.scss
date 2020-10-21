@@ -623,19 +623,23 @@
                     @include responsiveTo(tablet) {
                         @include absolute(auto, 25px, 50px, auto);
                     }
+                }
+            }
 
-                    button {
-                        padding: 15px 37px 11px;
-                        background-color: $blue-color-08;
-                        border-radius: 68px;
-                        font-weight: 600;
-                        color: $white-color-00;
-                        @include fontSize(18, normal, normal);
+            &__Button {
+                padding: 15px 37px 11px;
+                background-color: $blue-color-08;
+                border-radius: 68px;
+                font-weight: 600;
+                color: $white-color-00;
+                @include fontSize(18, normal, normal);
 
-                        @include onHover {
-                            background-color: $blue-color-hover-01;
-                        }
-                    }
+                @include onHover {
+                    background-color: $blue-color-hover-01;
+                }
+
+                &.Success {
+                    background-color: $green-color-00;
                 }
             }
         }
