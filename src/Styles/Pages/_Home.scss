@@ -284,9 +284,6 @@
         >span {
             z-index: -1;
             @include absolute(auto, auto, auto, auto);
-        }
-
-        &__Background {
 
             @include responsiveTo(tablet) {
                 width: 100%;
